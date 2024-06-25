@@ -1,0 +1,653 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Mrs+Saint+Delafield&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    font-family: "Jost", sans-serif;
+    font-weight: 300;
+    color: #b3afa6;
+
+}
+
+
+body {
+    background-color: #0b1315;
+}
+
+::-webkit-scrollbar {
+    width: .5rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #c9ab81;
+    border-radius: .5rem;
+
+}
+
+.container {
+    background: url('res image/About-us-title-img.jpg');
+    height: 75vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.image-block {
+    display: flex;
+    justify-content: center;
+    width: 95vw;
+    padding: 5rem 0;
+    margin: 0 auto;
+}
+
+.image {
+    width: 38%;
+    animation: popdown 1s ease;
+  animation-timeline: view( 350px 0px);
+  animation-iteration-count: 1;
+}
+@keyframes popdown {
+    from{transform: translateX(-100%);}
+    to{transform: translateX(0%);}
+}
+.image img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 12rem;
+}
+
+.content {
+    display: flex;
+    width: 55%;
+    gap: 4rem;
+    align-items: center;
+    flex-direction: column;
+    animation: popdownleft 1s ease  forwards ;
+    animation-timeline: view( 350px 0);
+    animation-iteration-count: 1;
+}
+@keyframes popdownleft {
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+.block1 {
+    width: 75%;
+    word-wrap: break-word;
+   
+}
+
+#h1 {
+    word-wrap: break-word;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: #fff;
+    font-size: 36px;
+    padding: 20px 0;
+    width: 70%;
+    line-height: 1.13889em;
+    letter-spacing: .15em;
+}
+
+#p1 {
+    font-size: 19px;
+    line-height: 28px;
+    color: #faf9f9;
+}
+
+.flex {
+    display: flex;
+    width: 100%;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.block2 {
+    width: 39%;
+    height: 385px;
+    align-self: flex-start;
+    display: inline-block;
+}
+
+.block2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#h2 {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 12px;
+    line-height: 1.91667em;
+    font-weight: 400;
+    letter-spacing: .15em;
+    margin: 25px 0;
+}
+
+.block3:not(h2, h3) {
+    color: #CED8D8;
+    font-family: "Jost", Sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+
+}
+
+#art {
+    font-family: "Mrs Saint Delafield", cursive;
+    color: #c9ab81;
+    font-size: 55px;
+    line-height: 60px;
+    transition: 0.3s ease;
+    width: 78%;
+    padding-top: 5rem;
+    rotate: 333deg;
+ 
+}
+
+.second {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 0;
+}
+
+#book {
+    text-transform: uppercase;
+    font-weight: 300;
+    color: #fff;
+    font-size: 36px;
+    padding: 20px 0;
+    line-height: 1.13889em;
+    letter-spacing: .15em;
+    text-align: center;
+}
+
+.second-section {
+    display: flex;
+    width: 95%;
+    height: 560px;
+    margin: 0 auto;
+    padding: 5em 0;
+    justify-content: space-around;
+}
+
+.image1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: clip-path 0.3s ease;
+    animation: big 0.3s ease-in-out;
+    animation-play-state: paused;
+}
+
+@keyframes big {
+    from {
+        clip-path: circle(27.3% at 50% 50%);
+    }
+
+    to {
+        clip-path: circle(70.7% at 50% 50%);
+    }
+}
+
+.second-section:hover .image1 img {
+    animation-play-state: running;
+}
+
+#celeb {
+    text-align: center;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 10px 0;
+}
+
+.bg-image {
+    background: url('res image/p1-img7.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 75vh;
+}
+.i-class
+{
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+   
+}
+#arrow
+{
+    font-size: 5rem;
+    color: #252525;
+    border: 3px solid #1a1919;
+    border-radius: 50%;
+    font-weight: 100;
+    cursor: pointer;
+}
+#arrow:hover
+{
+   color: #b3afa6;
+}
+input[type="radio"] {
+    display: none;
+}
+
+/* Slider wrapper*/
+.css-slider-wrapper {
+    position: relative;
+    width: 80vw;
+    margin: 0 auto;
+    height: 75vh;
+    overflow: hidden;
+}
+
+/* Slider */
+.slider {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 1;
+    z-index: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    transition: transform 1600ms;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    transform: scale(1);
+}
+
+
+.slide1 {
+    background: transparent;
+    left: 0;
+}
+
+.slide2 {
+    background: transparent;
+    left: 100%
+}
+
+.slide3 {
+    background: transparent;
+    left: 200%
+}
+
+.slide4 {
+    background: transparent;
+    left: 300%;
+}
+.slide5 {
+    background: transparent;
+    left: 400%;
+}
+.slider>div {
+    text-align: center;
+    width: 61%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+
+}
+
+/* Slider inner slide effect */
+.slider h2 {
+    font-family: "Mrs Saint Delafield", cursive;
+    font-size: 57px;
+    font-weight: 100;
+    line-height: 35px;
+    color: #b58c67;
+    letter-spacing: 2px;
+    transition: transform 0.1s ease;
+    opacity: 0;
+    transform: translateX(500px);
+
+}
+
+.slider p {
+
+    text-decoration: none;
+    opacity: 0;
+    font-size: 24px;
+    color: #fff;
+    line-height: 1.5em;
+    display: inline-block;
+    transform: translateX(-1210px);
+
+}
+
+.slider h2,
+.slider p {
+
+    transition: transform 800ms, opacity 800ms;
+    transition-delay: 0.7s;
+
+}
+
+/* Next and Preive arrow */
+.control {
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    margin-top: -25px;
+    z-index: 55;
+}
+
+.chevron-right {
+    width: 28px;
+    height: 28px;
+    opacity: 0.7;
+    border: 1px solid #c9ab81;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 18px;
+    transform: rotate(-45deg);
+    position: relative;
+}
+
+.chevron-left {
+    width: 28px;
+    height: 28px;
+    opacity: 0.7;
+    border: 1px solid #c9ab81;
+    border-width: 2px 0 0 2px;
+    display: inline-block;
+    padding: 18px;
+    transform: rotate(-45deg);
+    position: relative;
+}
+
+.small-left {
+    width: 2px;
+    height: 2px;
+    border: 1px solid #c9ab81;
+    border-width: 0;
+    display: inline-block;
+    padding: 7px;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 11px;
+    left: 11px;
+    transition: border-width 0.1s;
+
+}
+
+.small-right {
+    width: 2px;
+    height: 2px;
+    border: 1px solid #c9ab81;
+    border-width: 0;
+    display: inline-block;
+    padding: 7px;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 11px;
+    left: 23px;
+    transition: border-width 0.1s;
+}
+
+.control label {
+    z-index: 0;
+    display: none;
+    text-align: center;
+    cursor: pointer;
+
+}
+.control label:hover .chevron-left ,
+.control label:hover .chevron-right{
+    opacity: 1;
+}
+.control label:hover .small-left {
+    border-width: 2px 0 0 2px;
+}
+
+.control label:hover .small-right {
+    border-width: 0 2px 2px 0;
+}
+
+.next {
+    right: 1%;
+}
+
+.previous {
+    left: 1%;
+}
+
+/* Slider Pagger */
+.slider-pagination {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    z-index: 1000;
+}
+
+.slider-pagination label {
+    height: 5px;
+    width: 5px;
+    border-radius: 3px;
+    background-color: #c9ab81;
+    transition: transform 0.1s ease-in-out;
+    display: inline-block;
+    margin: 0 8px;
+    border: solid 1px #c9ab81;
+    cursor: pointer;
+}
+
+/* Slider Pagger arrow event */
+.slide-radio1:checked~.previous .numb5,
+.slide-radio1:checked~.next .numb2,
+.slide-radio2:checked~.next .numb3,
+.slide-radio3:checked~.next .numb4,
+.slide-radio2:checked~.previous .numb1,
+.slide-radio3:checked~.previous .numb2,
+.slide-radio4:checked~.previous .numb3,
+.slide-radio4:checked~.next .numb5 ,
+.slide-radio5:checked~.previous .numb4,
+.slide-radio5:checked~.next .numb1 {
+    display: block;
+    z-index: 1
+}
+
+/* Slider Pagger event */
+.slide-radio1:checked~.slider-pagination .page1,
+.slide-radio2:checked~.slider-pagination .page2,
+.slide-radio3:checked~.slider-pagination .page3,
+.slide-radio4:checked~.slider-pagination .page4 ,
+.slide-radio5:checked~.slider-pagination .page5 {
+    height: 10px;
+    width: 10px;
+    transform: rotate(45deg);
+    background-color: transparent;
+    border-radius: 0;
+}
+
+/* Slider slide effect */
+.slide-radio1:checked~.slider {
+
+    transform: translateX(0%);
+}
+
+.slide-radio2:checked~.slider {
+
+    transform: translateX(-100%);
+}
+
+.slide-radio3:checked~.slider {
+
+    transform: translateX(-200%);
+}
+
+.slide-radio4:checked~.slider {
+
+    transform: translateX(-300%);
+}
+.slide-radio5:checked~.slider {
+
+    transform: translateX(-400%);
+}
+
+/* .slider{
+animation: slidein 10s ease infinite forwards ;
+}
+@keyframes slidein {
+0%{transform: translateX(0%);}
+25%{transform: translateX(-100%);}
+50%{transform: translateX(-200%);}
+100%{transform: translateX(-300%);}
+} */
+.slide-radio1:checked~.slide1 h2,
+.slide-radio2:checked~.slide2 h2,
+.slide-radio3:checked~.slide3 h2,
+.slide-radio4:checked~.slide4 h2 ,
+.slide-radio5:checked~.slide5 h2 {
+
+    transform: translateX(0);
+    opacity: 1
+}
+
+.slide-radio1:checked~.slide1 p,
+.slide-radio2:checked~.slide2 p,
+.slide-radio3:checked~.slide3 p,
+.slide-radio4:checked~.slide4 p ,
+.slide-radio5:checked~.slide5 p  {
+
+    transform: translateX(0);
+    opacity: 1
+}
+.logo-image
+{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 4rem;
+}
+.logo
+{
+    width: 15%;
+}
+.logo img{
+    width: 100%;
+    height: 100%;
+   cursor: pointer;
+}
+#logo-head
+{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    padding: 8rem 0 2rem 0;
+    color: #c9ab81;
+    letter-spacing: 6px;
+    font-weight: 350;
+}
+
+.footer {
+    display: inline-block;
+    padding: 8rem 0 2rem 0;
+    text-align: center;
+    width: 100%;
+    
+
+
+}
+
+.footer-content {
+    padding: 2rem;
+    margin-top: 2rem;
+    font-size: 21px;
+    line-height: 42px;
+    font-weight: 300;
+    color: #fff;
+    transition: color 0.2s ease-out;
+
+}
+
+.footer-content a:hover {
+    color: #C49871;
+}
+
+#brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 2rem 0;
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-family: "Playfair Display", serif;
+    font-weight: 190;
+    color: #fcfbfac9;
+    letter-spacing: 6px;
+    padding: 20px 1rem;
+
+}
+
+#brand::before,
+#brand::after {
+    /* flex: 1; */
+    width: 0%;
+    content: "";
+    margin: 13px;
+    padding: 0.5px;
+    background-color: #977859;
+    transition: all 2s ease-in-out;
+}
+
+.footer:hover #brand::before,
+.footer:hover #brand::after {
+    width: 33%;
+}
+
+.footer-link a {
+    font-size: 23px;
+    margin: 0 17px;
+    position: relative;
+}
+.footer-link a::before {
+    content: "";
+    position: absolute;
+    background-color: #c9ab81;
+    height: 1px;
+    width: 0%;
+    bottom: -2px;
+    transition: 0.3s cubic-bezier(0, 0.82, 0.97, 0.79);
+
+}
+
+
+.footer-link a:hover:before {
+    width: 100%;
+}
+
+
+.footer-link a::after {
+    content: "";
+    position: absolute;
+    background-color: #c9ab81;
+    height: 1px;
+    width: 0%;
+    bottom: -6px;
+    left: 1px;
+    transition: 0.3s linear;
+    transition-delay: 0.2s;
+}
+
+
+.footer-link a:hover::after {
+    width: 100%;
+}

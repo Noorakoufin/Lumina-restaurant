@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet Our Chef</title>
+    <link rel="shortcut icon" href="res image/lumina-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Mrs+Saint+Delafield&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            box-sizing: border-box;
+            outline: none;
+            border: none;
+            font-family: "Jost", sans-serif;
+            font-weight: 300;
+            color: #b3afa6;
+
+        }
+
+        body {
+            background-color: #0E0D0A;
+        }
+
+        ::-webkit-scrollbar {
+            width: .5rem;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #979696;
+            border-radius: .5rem;
+
+        }
+
+        .video {
+            display: block;
+            text-align: center;
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+
+        }
+
+        .heading {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 5em 0;
+            color: #b3afa6;
+        }
+
+        #one {
+            text-transform: uppercase;
+            font-size: 2rem;
+            letter-spacing: 6px;
+            font-weight: 400;
+            line-height: 60px;
+            padding-bottom: 10px;
+        }
+
+        #two {
+            width: 40%;
+            font-size: 19px;
+        }
+
+        .main {
+            display: flex;
+            /* flex-direction: column; */
+            flex-flow: column wrap;
+            align-items: center;
+            padding: 1rem 0 3rem 0;
+        }
+
+        #culinary {
+            text-transform: uppercase;
+            font-size: 2rem;
+            letter-spacing: 10px;
+            color: #b3afa6;
+        }
+
+
+        .headchefs {
+            display: flex;
+            width: 90%;
+            padding: 4rem 0;
+            margin: 0 auto;
+            justify-content: space-around;
+        }
+
+        .image {
+            width: 25%;
+            position: relative;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 100%;
+            left: 4%;
+            right: 0;
+            overflow: hidden;
+            width: 0;
+            height: 90%;
+            font-weight: 400;
+            text-align: center;
+            transition: .5s ease;
+            background-color: rgb(174 169 169 / 66%);
+        }
+
+        .image:hover .overlay {
+            width: 90%;
+            top: 4%;
+            cursor: pointer;
+            padding: 20px;
+        }
+.image:hover img{
+    opacity: 0.7;
+}
+        h2#three {
+            text-transform: uppercase;
+            font-size: 2rem;
+            padding: 17px 0;
+            color: black;
+            font-weight: 350;
+        }
+
+        p#senior {
+
+            text-transform: capitalize;
+            font-size: 1.4rem;
+            font-weight: 420;
+            background-color: #cbced1;
+            color: #2b2c2f;
+        }
+
+        p#para {
+            font-size: 19px;
+            padding: 10px 0;
+            color: #060606;
+            font-weight: 450;
+        }
+
+        h2#ass-chef {
+            display: block;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 2rem;
+            font-weight: 350;
+            letter-spacing: 4px;
+        }
+
+        .chefs {
+            display: flex;
+            width: 90%;
+            justify-content: center;
+            gap: 2rem;
+            align-self: center;
+            margin: 0 auto;
+            padding: 4rem 0 0 0;
+
+        }
+
+        .chef-image {
+            width: 30%;
+            border: 1px solid #383024;
+            padding: 4rem;
+        }
+
+        .border-image {
+            position: relative;
+        }
+
+        .border-image::before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            border: 1px solid #c9ab81;
+            display: inline-block;
+            position: absolute;
+            top: -15px;
+            left: 15px;
+            z-index: -1;
+            border-top-right-radius: 76px;
+            border-bottom-left-radius: 76px;
+            transition: clip-path 0.6s ease;
+            clip-path: inset(50% -1px);
+
+        }
+
+        .chef-image:hover .border-image::before {
+            clip-path: inset(0% -11px);
+        }
+
+        .chefs img {
+            width: 100%;
+            height: auto;
+            border-top-right-radius: 76px;
+            border-bottom-left-radius: 76px;
+        }
+
+        h2#chef-name {
+            text-transform: uppercase;
+            font-weight: 450;
+            color: #fff;
+            font-size: 21px;
+            word-wrap: break-word;
+            padding: 15px 0;
+            text-align: center;
+            line-height: 1.47619em;
+            letter-spacing: .13em;
+        }
+
+        span {
+            letter-spacing: .01em;
+            font-weight: 450;
+            font-size: 20px;
+            text-transform: capitalize;
+            text-align: center;
+            display: block;
+        }
+
+        .footer {
+            display: inline-block;
+            margin-top: 2rem;
+            text-align: center;
+            width: 100%;
+            padding: 20px;
+
+
+        }
+
+        .footer-content {
+            padding: 2rem;
+            margin-top: 2rem;
+            font-size: 21px;
+            line-height: 42px;
+            font-weight: 300;
+            color: #fff;
+            transition: color 0.2s ease-out;
+
+        }
+
+        .footer-content a:hover {
+            color: #C49871;
+        }
+
+        #brand {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin: 2rem 0;
+            text-transform: uppercase;
+            font-size: 3rem;
+            font-family: "Playfair Display", serif;
+            font-weight: 190;
+            color: #fcfbfac9;
+            letter-spacing: 6px;
+            padding: 20px 1rem;
+
+        }
+
+        #brand::before,
+        #brand::after {
+            /* flex: 1; */
+            width: 0%;
+            content: "";
+            margin: 13px;
+            padding: 0.5px;
+            background-color: #977859;
+            transition: all 2s ease-in-out;
+        }
+
+        .footer:hover #brand::before,
+        .footer:hover #brand::after {
+            width: 33%;
+        }
+
+        .footer-link a {
+            font-size: 23px;
+            margin: 0 17px;
+            position: relative;
+        }
+
+        .footer-link a::before {
+            content: "";
+            position: absolute;
+            background-color: #c9ab81;
+            height: 1px;
+            width: 0%;
+            bottom: -2px;
+            transition: 0.3s cubic-bezier(0, 0.82, 0.97, 0.79);
+
+        }
+
+
+        .footer-link a:hover:before {
+            width: 100%;
+        }
+
+
+        .footer-link a::after {
+            content: "";
+            position: absolute;
+            background-color: #c9ab81;
+            height: 1px;
+            width: 0%;
+            bottom: -6px;
+            left: 1px;
+            transition: 0.3s linear;
+            transition-delay: 0.2s;
+        }
+
+
+        .footer-link a:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="video">
+        <video src="res image/video-sushi.mp4" title="sushi video" loop muted autoplay
+            style="width: 100%;object-fit: cover;"></video>
+    </div>
+    <div class="heading">
+        <h2 id="one">meet our chef</h2>
+        <p id="two">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis beatae facilis error expedita nihil
+            iusto sed, eum impedit ullam voluptas!</p>
+    </div>
+    <div class="main">
+        <div class="chef-heading">
+            <h1 id="culinary">culinary director</h1>
+        </div>
+        <div class="headchefs">
+            <div class="image">
+                <img src="res image/chef_1.png" alt="">
+                <div class="overlay">
+                    <h2 id="three">john doe</h2>
+                    <p id="senior">senior chef</p>
+                    <p id="para">We offer a luxurious and stylish transportation option for various occasions and
+                        events. Whether you're corporate event, ride, limousine rentals provide a touch of elegance and
+                        comfort.</p>
+                </div>
+            </div>
+            <div class="image">
+                <img src="res image/chef_2.png" alt="">
+                <div class="overlay">
+                    <h2 id="three">Gord li</h2>
+                    <p id="senior">junior chef</p>
+                    <p id="para">We offer a luxurious and stylish transportation option for various occasions and
+                        events. Whether you're corporate event, ride, limousine rentals provide a touch of elegance and
+                        comfort.</p>
+                </div>
+            </div>
+            <div class="image">
+                <img src="res image/chef_3.png" alt="">
+                <div class="overlay">
+                    <h2 id="three">Guy Fieri</h2>
+                    <p id="senior">deputy chef</p>
+                    <p id="para">We offer a luxurious and stylish transportation option for various occasions and
+                        events. Whether you're corporate event, ride, limousine rentals provide a touch of elegance and
+                        comfort.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <h2 id="ass-chef"> assistant chefs</h2>
+    <div class="chefs">
+        <div class="chef-image">
+            <div class="border-image">
+                <img src="res image/team-img1.jpg" alt="">
+            </div>
+            <h2 id="chef-name">marcel fulton</h2>
+            <span>chef</span>
+        </div>
+        <div class="chef-image">
+            <div class="border-image">
+                <img src="res image/h4-team-img2.jpg" alt="">
+            </div>
+            <h2 id="chef-name">calen baker</h2>
+            <span>assistant chef</span>
+        </div>
+        <div class="chef-image">
+            <div class="border-image">
+                <img src="res image/h4-team-img3.jpg" alt="">
+            </div>
+            <h2 id="chef-name">malick schmidt</h2>
+            <span>chef</span>
+        </div>
+    </div>
+    <div class="chefs">
+        <div class="chef-image">
+            <div class="border-image">
+                <img src="res image/team-img2.jpg" alt="">
+            </div>
+            <h2 id="chef-name">henri challahan</h2>
+            <span>chef</span>
+        </div>
+        <div class="chef-image">
+            <div class="border-image">
+                <img src="res image/team-img3.jpg" alt="">
+            </div>
+            <h2 id="chef-name">donna shields</h2>
+            <span>assistant chef</span>
+        </div>
+        <div class="chef-image">
+            <div class="border-image">
+                <img src="res image/team-img4.jpg" alt="">
+            </div>
+            <h2 id="chef-name">noah cannon</h2>
+            <span>chef</span>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="div" id="brand">lumina</div>
+        <div class="footer-content">
+            <p>Lumina Restaurant & Fine dining, 71 Madison Ave</p>
+            <p> 10013 New York, <a href="#">914-309-7030</a>, <a href="#">reservations@lumina.com</a></p>
+            </p> Open: 09:00 am – 01:00 pm</p>
+        </div>
+        <div class="footer-link" style="margin:12px 0;">
+            <a href="https://www.facebook.com/" id="face">Facebook</a>
+            <a href="https://www.instagram.com/" id="ig">Instagram</a>
+            <a href="https://www.tripadvisor.in/" id="ta">Trip Adviser</a>
+        </div>
+    </footer>
+</body>
+
+</html>

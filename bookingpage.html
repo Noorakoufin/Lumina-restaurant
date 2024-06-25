@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking page</title>
+    <link rel="shortcut icon" href="res image/lumina-logo.png" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Mrs+Saint+Delafield&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Miniver&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            box-sizing: border-box;
+            outline: none;
+            border: none;
+            font-family: "Jost", sans-serif;
+            font-weight: 300;
+            color: #fff;
+
+        }
+
+        body {
+            background-color: #0b1315;
+
+        }
+
+
+        ::-webkit-scrollbar {
+            width: .5rem;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #c9ab81;
+            border-radius: .5rem;
+
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            padding-bottom: 1rem;
+        }
+
+        .image {
+            animation: slidedown 1.7s cubic-bezier(0, 0, 0.06, 1.05) 0.4s;
+        }
+
+        @keyframes slidedown {
+            from {
+                transform: translateY(-100%);
+            }
+
+            to {
+                transform: translateY(0%);
+            }
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        h2#one {
+            font-size: 5.6rem;
+            text-transform: uppercase;
+            font-family: 'Times New Roman', Times, serif;
+            /* font-family: caviar_dreamsbold, sans-serif; */
+            line-height: 103px;
+            letter-spacing: 4px;
+        }
+
+        /* .heading
+      {
+        transition: opacity 1s ease;
+        animation: opacit 4s ease-in;
+      }
+
+        @keyframes opacit {
+            0% {
+                opacity: 0;
+            }
+
+            25% {
+                opacity: 0.3;
+            }
+
+            50% {
+                opacity: 0.7;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        } */
+
+        h2#table {
+            font-family: "Mrs Saint Delafield", cursive;
+            color: #c9ab81;
+            text-align: center;
+            font-size: 33px;
+            letter-spacing: 5px;
+            font-weight: 550;
+        }
+
+        h2#reser {
+            font-size: 3rem;
+            text-transform: uppercase;
+            color: #c9ab81;
+            text-align: center;
+            font-weight: 400;
+            letter-spacing: 6px;
+        }
+
+        .main {
+            display: flex;
+            width: 74%;
+            padding-top: 3rem;
+            padding-bottom: 10em;
+            margin: 0 auto;
+            justify-content: space-between;
+            font-family: "Josefin Sans", sans-serif;
+            font-size: 19px;
+            font-weight: 300;
+            line-height: 29px;
+            color: #fff;
+            letter-spacing: 0;
+            text-transform: none;
+        }
+
+        input {
+            background: transparent;
+            border: 1px solid #c9ab81;
+            color: #c6c1bb;
+            font-size: 20px;
+            padding: 8px 20px;
+        }
+
+        input:focus {
+            border: 2px solid #c9ab81;
+        }
+
+        ::-webkit-input-placeholder {
+            color: rgb(240, 232, 232);
+        }
+
+        input[type="date"]::-webkit-calendar-picker-indicator,
+        input[type="time"]::-webkit-calendar-picker-indicator {
+            color: #282726;
+            background-color: #d0c7a3;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        input[type="time"] {
+            padding: 0 36px;
+        }
+
+        input[type="button"] {
+            padding: 10px 51px;
+            transform: scale(1);
+            cursor: pointer;
+        }
+
+        input[type="button"]:hover {
+
+            transform: scale(1.05);
+            background-color: #c6c1bb;
+            color: black;
+            font-weight: 400;
+            text-decoration: rgb(142, 30, 30);
+        }
+
+        .about {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 2rem;
+            height: 600px;
+        }
+
+        .video {
+            width: 50%;
+            height: 100%;
+
+        }
+
+        .written {
+            width: 50%;
+            height: 100%;
+            border: 1px solid #fbf8f4;
+            padding: 2rem;
+            position: relative;
+        }
+
+        h2#find {
+            font-size: 3rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            color: #c9ab81;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        p#add {
+            padding: 2em;
+            text-align: center;
+            font-size: 20px;
+            line-height: 36px;
+        }
+
+        h2#open {
+            text-align: center;
+            padding-bottom: 2em;
+        }
+
+        p {
+            font-size: 20px;
+            text-align: center;
+            padding-bottom: 5px;
+        }
+
+        #showIframe {
+            text-align: center;
+            display: flow-root;
+            background: transparent;
+            border: 1px solid #c9ab81;
+            color: #c6c1bb;
+            font-size: 20px;
+            padding: 8px 20px;
+            width: 30%;
+            margin: 0 auto;
+            /* transition: 0.2s ease; */
+        }
+
+        #showIframe:hover {
+            scale: 1.02;
+        }
+
+        #myIframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            visibility: hidden;
+            width: 100%;
+            height: 100%;
+        }
+
+        #showIframe:focus+#myIframe {
+            visibility: visible;
+
+        }
+
+        #myIframe:focus {
+            visibility: visible;
+
+        }
+
+        .footer {
+            display: inline-block;
+            margin-top: 2rem;
+            text-align: center;
+            width: 100%;
+            padding: 20px;
+
+
+        }
+
+        .footer-content {
+            padding: 2rem;
+            margin-top: 2rem;
+            font-size: 21px;
+            line-height: 42px;
+            font-weight: 300;
+            color: #fff;
+            transition: color 0.2s ease-out;
+
+        }
+
+        .footer-content a:hover {
+            color: #C49871;
+        }
+
+        #brand {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin: 2rem 0;
+            text-transform: uppercase;
+            font-size: 3rem;
+            font-family: "Playfair Display", serif;
+            font-weight: 190;
+            color: #fcfbfac9;
+            letter-spacing: 6px;
+            padding: 20px 1rem;
+
+        }
+
+        #brand::before,
+        #brand::after {
+            /* flex: 1; */
+            width: 0%;
+            content: "";
+            margin: 13px;
+            padding: 0.5px;
+            background-color: #977859;
+            transition: all 2s ease-in-out;
+        }
+
+        .footer:hover #brand::before,
+        .footer:hover #brand::after {
+            width: 33%;
+        }
+
+        .footer-link a {
+            font-size: 23px;
+            margin: 0 17px;
+            position: relative;
+        }
+        .footer-link a::before {
+            content: "";
+            position: absolute;
+            background-color: #c9ab81;
+            height: 1px;
+            width: 0%;
+            bottom: -2px;
+            transition: 0.3s cubic-bezier(0, 0.82, 0.97, 0.79);
+
+        }
+
+
+        .footer-link a:hover:before {
+            width: 100%;
+        }
+
+
+        .footer-link a::after {
+            content: "";
+            position: absolute;
+            background-color: #c9ab81;
+            height: 1px;
+            width: 0%;
+            bottom: -6px;
+            left: 1px;
+            transition: 0.3s linear;
+            transition-delay: 0.2s;
+        }
+
+
+        .footer-link a:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper" style="    background-color: #0c1b1f;">
+        <div class="heading" style="    padding: 3rem 0;
+    text-align: center;">
+            <h2 id="one">lumina</h2>
+            <p id="two" style="font-size: 20px; font-weight: 400;">Premium Restaurant</p>
+        </div>
+        <div class="content">
+            <div class="image" style="padding:0 20px;animation-delay: 200ms">
+                <img src="res image/landing-img-3-.png" alt="" style="    border-top-right-radius: 7rem;">
+            </div>
+            <div class="image" style="animation-delay: 250ms;">
+                <img src="res image/landing-img-4-.png" alt="" style="    border-radius: 9rem 9rem 0 0;">
+            </div>
+            <div class="image" style="padding:0 20px;animation-delay: 300ms;">
+                <img src="res image/landing-img-5- (1).png" alt="" style="    border-radius: 9rem 9rem 0 0;">
+            </div>
+            <div class="image" style="padding-right:20px;animation-delay: 350ms;">
+                <img src="res image/landing-img-6-.png" alt="" style="    border-top-left-radius: 7rem;">
+            </div>
+        </div>
+    </div>
+    <div class="wrapper-content" style="padding: 5rem;">
+        <h2 id="table">Your Table</h2>
+        <h2 id="reser">reservation</h2>
+    </div>
+    <div class="main">
+        <input type="text" name="" id="" class="text" placeholder="1 People" required>
+        <input type="date" name="" id="" class="date" required>
+        <input type="time" name="" id="" class="time" required>
+        <a href="thankyou.html"><input type="button" value="Book Now" class="button"></a>
+    </div>
+    <div class="about">
+        <div class="video">
+            <video src="res image/pexels-pinaak-kumar-16730060-1080x1920-25fps-online-video-cutter.com-1.mp4" autoplay
+                muted loop width="100%" height="100%"></video>
+        </div>
+        <div class="written">
+            <h2 id="find">find us</h2>
+            <p id="add">71 Madison Ave, New York, NY 10016, 44 0567899,
+                reservations@example.com, office@example.com</p>
+            <h2 id="open">OPENING HOURS:</h2>
+            <p>Mon – Thu: 10.00 am – 01:00 am</p>
+            <p style="padding-bottom: 2em;">Fri – Sun: 10:00 am – 02:00 am</p>
+            <a href="#" id="showIframe" target="_blank">Open Map</a>
+            <iframe id="myIframe"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=-0.13835525512695314%2C51.509865%2C-0.11855316162109375%2C51.528308&layer=mapnik"
+                width="50px" height="50px" title="map"></iframe>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="div" id="brand">lumina</div>
+        <div class="footer-content">
+            <p>Lumina Restaurant & Fine dining, 71 Madison Ave</p>
+            <p> 10013 New York, <a href="#">914-309-7030</a>, <a href="#">reservations@lumina.com</a></p>
+            </p> Open: 09:00 am – 01:00 pm</p>
+        </div>
+        <div class="footer-link" style="margin:12px 0;">
+            <a href="https://www.facebook.com/" id="face">Facebook</a>
+            <a href="https://www.instagram.com/" id="ig">Instagram</a>
+            <a href="https://www.tripadvisor.in/" id="ta">Trip Adviser</a>
+        </div>
+    </footer>
+</body>
+
+</html>
