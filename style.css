@@ -565,7 +565,17 @@ h2#one {
     transform: translateY(100%);
   }
 
+  /* .hero {
+    height: 35vh;
+  }
 
+  .slider {
+    height: 25vh;
+  }
+
+  .cuisine-content {
+    width: 61%;
+  } */
 }
 
 @media screen and (max-width: 790px) {
@@ -672,7 +682,7 @@ h2#one {
 
   #logo {
     display: inline-block;
-    
+
   }
 
   .fa-x {
@@ -764,20 +774,22 @@ h2#one {
     font-size: 21px;
   }
 }
+
 @media screen and (max-width:450px) {
-.swap-content {
- 
-  height: 383px;
+  .swap-content {
+
+    height: 383px;
+  }
+
+  .swap-content:hover .swap-image {
+    transform: translateY(115%);
+  }
+
+  .swap-content:hover .swap-text {
+    transform: translateY(-106%);
+  }
 }
 
-.swap-content:hover .swap-image {
-  transform: translateY(115%);
-}
-
-.swap-content:hover .swap-text {
-  transform: translateY(-106%);
-}
-}
 @media screen and (max-width:370px) {
   .hero #hero h2 {
     font-size: 50px;
