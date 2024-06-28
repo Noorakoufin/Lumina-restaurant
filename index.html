@@ -5,19 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lumina restaurant</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="shortcut icon" href="res image/lumina-logo.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <!-- hero section -->
-    <nav class="navbar">
-        <a href="index.html" id="item1">home</a>
-        <a href="menu.html" id="item3">our menu</a>
-        <a href="meetchef.html" id="item2">our chef</a>
-        <a href="bookingpage.html" id="item4">booking</a>
-        <a href="about us.html" id="item5">about us</a>
-    </nav>
+    <div class="nav-content">
+        <div class="main-head">
+            <h2 id="logo">lumina</h2>
+        </div>
+        <nav class="navbar">
+            <a href="index.html" id="item1">home</a>
+            <a href="menu.html" id="item3">our menu</a>
+            <a href="meetchef.html" id="item2">our chef</a>
+            <a href="bookingpage.html" id="item4">booking</a>
+            <a href="about us.html" id="item5">about us</a>
+        </nav>
+        <button class="ham-icon">
+            <label for="ham">
+                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-x"></i>
+            </label>
+            <input type="checkbox" name="" id="ham">
+        </button>
+    </div>
     <div class="hero">
         <div class="hero-content" id="hero">
             <h2>Welcome to Lumina</h2>
@@ -37,20 +50,20 @@
                 <div class="left-column">
                     <div class="scroll-up">
                         <a href="split.html">
-                        <img src="res image/Split-screen-img-1.jpg" alt="Image 1">
-                        <img src="res image/Split-screen-img-2.jpg" alt="Image 2">
-                        <img src="res image/Split-screen-img-3.jpg" alt="Image 3">
-                        <img src="res image/Split-screen-img-4.jpg" alt="Image 4"></a>
+                            <img src="res image/Split-screen-img-1.jpg" alt="Image 1">
+                            <img src="res image/Split-screen-img-2.jpg" alt="Image 2">
+                            <img src="res image/Split-screen-img-3.jpg" alt="Image 3">
+                            <img src="res image/Split-screen-img-4.jpg" alt="Image 4"></a>
 
                     </div>
                 </div>
                 <div class="right-column">
                     <div class="scroll-down">
                         <a href="split.html">
-                        <img src="res image/Split-screen-img-5.jpg" alt="Image 5">
-                        <img src="res image/Split-screen-img-6.jpg" alt="Image 6">
-                        <img src="res image/Split-screen-img-7.jpg" alt="Image 7">
-                        <img src="res image/Split-screen-img-8.jpg" alt="Image 8"></a>
+                            <img src="res image/Split-screen-img-5.jpg" alt="Image 5">
+                            <img src="res image/Split-screen-img-6.jpg" alt="Image 6">
+                            <img src="res image/Split-screen-img-7.jpg" alt="Image 7">
+                            <img src="res image/Split-screen-img-8.jpg" alt="Image 8"></a>
 
                     </div>
                 </div>
@@ -60,22 +73,22 @@
             <div class="barhome-heading" style="margin-top: 40px;">
                 <h2 id="bhome">gallery masonry</h2>
             </div>
-           
+
             <div class="bar-home">
                 <div class="left-column">
                     <div class="scroll-up">
                         <a href="gallery.html">
-                        <img src="res image/gallery4-img1.jpg" alt="Image 1">
-                        <img src="res image/gallery4-img11.jpg" alt="Image 2">
-                        <img src="res image/gallery4-img12.jpg" alt="Image 3"></a>
+                            <img src="res image/gallery4-img1.jpg" alt="Image 1">
+                            <img src="res image/gallery4-img11.jpg" alt="Image 2">
+                            <img src="res image/gallery4-img12.jpg" alt="Image 3"></a>
                     </div>
                 </div>
                 <div class="right-column">
                     <div class="scroll-down">
                         <a href="gallery.html">
-                        <img src="res image/gallery4-img2.jpg" alt="Image 4">
-                        <img src="res image/gallery4-img3.jpg" alt="Image 6">
-                        <img src="res image/gallery4-img5.jpg" alt="Image 4"></a>
+                            <img src="res image/gallery4-img2.jpg" alt="Image 4">
+                            <img src="res image/gallery4-img3.jpg" alt="Image 6">
+                            <img src="res image/gallery4-img5.jpg" alt="Image 4"></a>
                     </div>
                 </div>
             </div>
@@ -91,11 +104,10 @@
     </div>
     <section class="video">
         <video src="res image/landing-video.mp4" title="restaurant video" class="video-class" muted autoplay loop
-             style="border: 0.1px solid #c9ab81;width: 100%;"></video>
+            style="border: 0.1px solid #c9ab81;width: 100%;"></video>
         <div class="video-content">
             <h2 id="video-text">the embodiment of modern gastronomy trends</h2>
-           <div class="div" id="brand" style=" font-family: Jost, sans-serif ;
-           font-size: 3rem;color: #fff;">lumina</div>
+            <div class="div" id="brand-l">lumina</div>
         </div>
 
     </section>
@@ -109,7 +121,7 @@
             <img src="res image/h5-img1.png" alt="" class="swap-image">
             <div class="swap-text">
                 <h2>Golden Soufflé</h2>
-                <p>Creamy cheesecake with a new graham cracker crust, topped fruit compote.
+                <p>Creamy cheesecake with a new graham cracker crust, topped.
                 </p>
             </div>
         </div>
@@ -117,26 +129,26 @@
             <img src="res image/h5-img3.png" alt="" class="swap-image">
             <div class="swap-text">
                 <h2>Ambrosia Tart</h2>
-                <p>Light and fluffy vanilla cake made with real vanilla bean, topped with cream.</p>
+                <p>Light and fluffy vanilla cake made with real vanilla bean.</p>
             </div>
         </div>
         <div class="swap-content">
             <img src="res image/h5-img2.png" alt="" class="swap-image">
             <div class="swap-text">
                 <h2>Heirloom Bruschetta</h2>
-                <p>A Moroccan-inspired stew with chickpeas, root vegetables, and aromatic spices.</p>
+                <p>A Moroccan-inspired stew with chickpeas, root vegetables.</p>
             </div>
         </div>
         <div class="swap-content">
             <img src="res image/h5-img4.png" alt="" class="swap-image">
             <div class="swap-text">
                 <h2>Forest Medley</h2>
-                <p>Tender filet mignon grilled to perfection, accompanied by roasted asparagus. </p>
+                <p>Tender filet mignon grilled to perfection,accompanied. </p>
             </div>
         </div>
     </div>
     <footer class="footer">
-       <div class="div" id="brand">lumina</div>
+        <div class="div" id="brand">lumina</div>
         <div class="footer-content">
             <p>Lumina Restaurant & Fine dining, 71 Madison Ave</p>
             <p> 10013 New York, <a href="#">914-309-7030</a>, <a href="#">reservations@lumina.com</a></p>

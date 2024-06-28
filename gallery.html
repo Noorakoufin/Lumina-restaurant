@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lumina-Gallery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="shortcut icon" href="res image/lumina-logo.png" type="image/x-icon">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Mrs+Saint+Delafield&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
         * {
             margin: 0;
@@ -51,14 +53,26 @@
             display: flex;
             justify-content: center;
             gap: 4rem;
+            width: 100%;
             padding: 30px;
-            border-bottom: 1px solid #c9ab81;
             position: sticky;
             top: 0;
             z-index: 99;
             letter-spacing: 2px;
             background: url('res image/h10-bckground-scaled.jpg');
             cursor: pointer;
+        }
+
+        .nav-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+            border-bottom: 1px solid #c9ab81;
+            position: sticky;
+            top: 0;
+            z-index: 99;
+            background: url('res image/h10-bckground-scaled.jpg');
         }
 
         .navbar a {
@@ -68,6 +82,35 @@
             font-weight: 300;
             position: relative;
             text-transform: uppercase;
+        }
+
+        #logo {
+            color: #bba27e;
+            text-transform: capitalize;
+            letter-spacing: 5px;
+            padding: 12px 0;
+            font-family: "Great Vibes", cursive;
+            font-size: 33px;
+            font-size: 1.4rem;
+            font-weight: 400;
+            display: none;
+        }
+
+        .ham-icon {
+            display: none;
+            background-color: transparent;
+            border: none;
+        }
+
+        .ham-icon .fa-bars,
+        .ham-icon .fa-x {
+            color: #bba27e;
+            font-size: 1rem;
+
+        }
+
+        .ham-icon input[type="checkbox"] {
+            appearance: none;
         }
 
         .navbar>a::before,
@@ -181,13 +224,21 @@
             padding: 0 4px;
             justify-content: center;
             cursor: pointer;
-          animation: fadein 1.5s ease 0.1s;
+            animation: fadein 1.5s ease 0.1s;
         }
 
         @keyframes fadein {
-            0%{  clip-path: polygon(28% 31%, 24% 79%, 36% 80%, 35% 40%, 71% 43%, 75% 67%, 31% 67%, 26% 80%, 84% 80%, 81% 36%);}
-           50%{clip-path: polygon(3% 35%, 6% 74%, 36% 80%, 35% 40%, 26% 66%, 26% 67%, 33% 65%, 13% 78%, 90% 75%, 96% 34%);}
-           100%{clip-path: polygon(0 0, 0 100%, 36% 80%, 35% 40%, 26% 66%, 26% 67%, 33% 65%, 0 100%, 100% 100%, 100% 0);}
+            0% {
+                clip-path: polygon(28% 31%, 24% 79%, 36% 80%, 35% 40%, 71% 43%, 75% 67%, 31% 67%, 26% 80%, 84% 80%, 81% 36%);
+            }
+
+            50% {
+                clip-path: polygon(3% 35%, 6% 74%, 36% 80%, 35% 40%, 26% 66%, 26% 67%, 33% 65%, 13% 78%, 90% 75%, 96% 34%);
+            }
+
+            100% {
+                clip-path: polygon(0 0, 0 100%, 36% 80%, 35% 40%, 26% 66%, 26% 67%, 33% 65%, 0 100%, 100% 100%, 100% 0);
+            }
         }
 
         .box {
@@ -271,22 +322,175 @@
             width: 33%;
         }
 
+        .footer-link {
+            margin: 26px 0;
+        }
+
         .footer-link a {
             font-size: 23px;
             margin: 0 17px;
             position: relative;
         }
+
+        @media screen and (max-width:724px) {
+            .navbar {
+                gap: 0;
+                padding: 30px 0;
+                justify-content: space-around;
+            }
+
+            .navbar a {
+                font-size: 14px;
+            }
+
+            .heading h2 {
+                width: 83%;
+                padding-top: 0;
+                font-size: 21px;
+            }
+
+            .heading {
+                margin-bottom: 1rem;
+            }
+
+            .footer {
+                margin-top: 0;
+                padding: 0;
+            }
+        }
+
+        @media screen and (max-width:474px) {
+            .heading h2 {
+                width: 95%;
+                font-size: 19px;
+            }
+
+            p#p1 {
+                font-size: 48px;
+            }
+
+            .box {
+                max-width: 50%;
+            }
+
+            .gallery-container {
+                margin-top: 1rem;
+            }
+
+            .navbar a {
+                display: block;
+                padding: 5px 0;
+                font-size: 1rem;
+            }
+
+            .nav-content {
+                justify-content: space-around;
+            }
+
+            .navbar {
+                order: 2;
+                display: block;
+                height: 0;
+                padding: 21px 100px 20px 120px;
+                width: 100%;
+                overflow: hidden;
+                position: fixed;
+                left: -100%;
+                top: 53px;
+                transition: 0.5s ease-in-out;
+            }
+
+            .ham-icon {
+                display: block;
+            }
+
+            #logo {
+                display: inline-block;
+
+            }
+
+            .fa-x {
+                display: none;
+            }
+
+            .nav-content:has(input[type="checkbox"]:checked) .navbar {
+
+                height: 204px;
+                overflow: visible;
+                left: 0;
+                text-align: center;
+                background: #3c2222eb;
+            }
+
+            .nav-content:has(input[type="checkbox"]:checked) .fa-bars {
+                display: none;
+            }
+
+            .nav-content:has(input[type="checkbox"]:checked) .fa-x {
+                display: inline-block;
+            }
+
+            #brand {
+                font-size: 2rem;
+            }
+
+            .footer-content {
+                padding: 0;
+                margin-top: 0;
+                font-size: 18px;
+                line-height: 35px;
+            }
+
+            .footer-link a {
+                font-size: 19px;
+                margin: 0 11px;
+            }
+
+        }
+
+        @media screen and (max-width:375px) {
+
+            .footer-content,
+            .footer-link a {
+
+                font-size: 16px;
+            }
+
+            .footer-link {
+                margin: 26px 0;
+            }
+
+            p#p1 {
+                font-size: 42px;
+            }
+
+            .heading h2 {
+                font-size: 17px;
+            }
+        }
     </style>
 </head>
 
 <body>
-    <nav class="navbar">
-        <a href="index.html" id="item1">home</a>
-        <a href="menu.html" id="item3">our menu</a>
-        <a href="meetchef.html" id="item2">our chef</a>
-        <a href="bookingpage.html" id="item4">booking</a>
-        <a href="about us.html" id="item5">about us</a>
-    </nav>
+    <div class="nav-content">
+        <div class="main-head">
+            <h2 id="logo">lumina</h2>
+        </div>
+        <nav class="navbar">
+            <a href="index.html" id="item1">home</a>
+            <a href="menu.html" id="item3">our menu</a>
+            <a href="meetchef.html" id="item2">our chef</a>
+            <a href="bookingpage.html" id="item4">booking</a>
+            <a href="about us.html" id="item5">about us</a>
+        </nav>
+        <button class="ham-icon">
+            <label for="ham">
+                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-x"></i>
+            </label>
+            <input type="checkbox" name="" id="ham">
+        </button>
+    </div>
     <div class="gallery-container">
         <div class="heading">
             <h2 id="head">Lumina IS FOR EVERYONE WHO COLLECTS BEAUTIFUL MOMENTS</h2>
@@ -339,8 +543,9 @@
                     </div>
                 </div>
                 <div class="one">
-                    <img src="res image/landing-img-4-.png" alt="" class="image">
+                    <img src="res image/gallery4-img10.jpg" alt="" class="image" style="object-fit: cover;">
                 </div>
+
             </div>
         </div>
 
@@ -352,7 +557,7 @@
             <p> 10013 New York, <a href="#">914-309-7030</a>, <a href="#">reservations@lumina.com</a></p>
             </p> Open: 09:00 am – 01:00 pm</p>
         </div>
-        <div class="footer-link" style="margin:12px 0;">
+        <div class="footer-link">
             <a href="https://www.facebook.com/" id="face">Facebook</a>
             <a href="https://www.instagram.com/" id="ig">Instagram</a>
             <a href="https://www.tripadvisor.in/" id="ta">Trip Adviser</a>

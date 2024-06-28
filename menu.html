@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="shortcut icon" href="res image/lumina-logo.png" type="image/x-icon">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Mrs+Saint+Delafield&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
         * {
             margin: 0;
@@ -17,8 +19,7 @@
             text-decoration: none;
             outline: none;
             border: none;
-            /* font-family: 'Caviar Dreams Bold' sans-serif ; */
-            font-family: "Jost", sans-serif;
+           font-family: "Jost", sans-serif;
             font-weight: 300;
             color: #fff;
         }
@@ -45,13 +46,23 @@
         /* hero section */
         .navbar {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+           justify-content: center;
             gap: 4rem;
             padding: 30px;
-            border-bottom: 1px solid #c9ab81;
             letter-spacing: 2px;
             cursor: pointer;
+        }
+
+        .nav-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+            border-bottom: 1px solid #c9ab81;
+            position: sticky;
+            top: 0;
+            z-index: 99;
+            background-color: #0b1315;
         }
 
         .navbar a {
@@ -61,6 +72,35 @@
             font-weight: 300;
             position: relative;
             text-transform: uppercase;
+        }
+
+        #logo {
+            color: #bba27e;
+            text-transform: capitalize;
+            letter-spacing: 5px;
+            padding: 12px 0;
+            font-family: "Great Vibes", cursive;
+            font-size: 33px;
+            font-size: 1.4rem;
+            font-weight: 400;
+            display: none;
+        }
+
+        .ham-icon {
+            display: none;
+            background-color: transparent;
+            border: none;
+        }
+
+        .ham-icon .fa-bars,
+        .ham-icon .fa-x {
+            color: #bba27e;
+            font-size: 1rem;
+
+        }
+
+        .ham-icon input[type="checkbox"] {
+            appearance: none;
         }
 
         .navbar>a::before,
@@ -138,9 +178,15 @@
             transition: 0.1s ease-in-out;
 
         }
+
         @keyframes popup {
-            from{transform: translateY(-400%);}
-            to{transform: translateY(0%);}
+            from {
+                transform: translateY(-400%);
+            }
+
+            to {
+                transform: translateY(0%);
+            }
         }
 
         h2#one {
@@ -166,6 +212,14 @@
 
         }
 
+        .one {
+            width: 35%;
+        }
+
+        .two {
+            width: 34%;
+        }
+
         .one,
         .two {
             display: flex;
@@ -183,7 +237,7 @@
             text-transform: uppercase;
             transition: padding 0.1s;
         }
-        
+
         p#p-one {
             font-size: 20.5px;
             letter-spacing: 1px;
@@ -191,12 +245,12 @@
             line-height: 29px;
             color: #fff;
         }
-   
-       .a:hover  h2#two
-       {
-       
-        padding-left: 10px;
-       }
+
+        .a:hover h2#two {
+
+            padding-left: 10px;
+        }
+
         .parallex2 {
             background: url('res image/Our-menu-img-1.jpg') fixed no-repeat;
             height: 70vh;
@@ -208,16 +262,17 @@
             height: 70vh;
             background-size: cover;
         }
-        .parallex4
-        {
+
+        .parallex4 {
             background: url('res image/Our-menu-img-3.jpg') fixed no-repeat;
             height: 70vh;
             background-size: cover;
         }
-        .no-parallex:hover
-        {
+
+        .no-parallex:hover {
             border: 2px solid #c9ab81;
         }
+
         .footer {
             display: inline-block;
             margin-top: 2rem;
@@ -261,7 +316,6 @@
 
         #brand::before,
         #brand::after {
-            /* flex: 1; */
             width: 0%;
             content: "";
             margin: 13px;
@@ -280,6 +334,182 @@
             margin: 0 17px;
             position: relative;
         }
+
+        @media screen and (max-width:725px) {
+            .navbar {
+                gap: 2rem;
+            }
+
+            .one {
+                width: 45%;
+            }
+
+            .two {
+                width: 40%;
+            }
+
+            h2#two,
+            p#p-one {
+                font-size: 17px;
+            }
+
+        }
+
+        @media screen and (max-width:595px) {
+            .navbar {
+                gap: 1rem;
+            }
+
+            .content {
+                width: 100%;
+                margin: 0;
+            }
+
+            .one,
+            .two {
+                width: 44%;
+            }
+
+            h2#two,
+            p#p-one {
+                font-size: 14px;
+            }
+        }
+
+        @media screen and (max-width:550px) {
+            .navbar a {
+                font-size: 13px;
+            }
+
+            h2#head {
+                font-size: 35px;
+            }
+
+            .parallex {
+                height: 76vh;
+                background-position: center;
+            }
+        }
+
+        @media screen and (max-width:474px) {
+
+            .two {
+                display: none;
+            }
+
+            h2#two,
+            p#p-one {
+                font-size: 16px;
+            }
+
+            .one {
+                width: 90%;
+            }
+
+            .content {
+                justify-content: center;
+            }
+
+            .footer {
+                margin-top: 0;
+            }
+
+            #brand {
+                font-size: 2.2rem;
+            }
+
+            .footer-content {
+                padding: 0;
+                margin-top: 0;
+                font-size: 17px;
+
+            }
+
+            .footer-link a {
+                font-size: 20px;
+                margin: 0 12px;
+            }
+
+            .parallex2,
+            .parallex3,
+            .parallex4 {
+                background-position: center;
+            }
+
+            .navbar a {
+                display: block;
+                padding: 5px 0;
+                font-size: 1rem;
+            }
+
+            .nav-content {
+                justify-content: space-around;
+            }
+
+            .navbar {
+                order: 2;
+                display: block;
+                height: 0;
+                padding: 21px 100px 20px 120px;
+                width: 100%;
+                overflow: hidden;
+                position: fixed;
+                left: -100%;
+                top: 53px;
+                transition: 0.5s ease-in-out;
+            }
+
+            .ham-icon {
+                display: block;
+            }
+
+            #logo {
+                display: inline-block;
+
+            }
+
+            .fa-x {
+                display: none;
+            }
+
+            .nav-content:has(input[type="checkbox"]:checked) .navbar {
+
+                height: 204px;
+                overflow: visible;
+                left: 0;
+                text-align: center;
+                background-color: #1e2b2be8;
+            }
+
+            .nav-content:has(input[type="checkbox"]:checked) .fa-bars {
+                display: none;
+            }
+
+            .nav-content:has(input[type="checkbox"]:checked) .fa-x {
+                display: inline-block;
+            }
+        }
+
+
+
+        @media screen and (max-width:350px) {
+            .footer {
+                padding: 0;
+            }
+
+            .footer-content {
+                padding-bottom: 20px;
+                font-size: 18px;
+            }
+
+            .footer-link a {
+                font-size: 18px;
+            }
+
+            #brand {
+                font-size: 2rem;
+            }
+        }
     </style>
 </head>
 
@@ -287,13 +517,25 @@
     <!-- hero section -->
 
     <div class="parallex">
-        <nav class="navbar">
-            <a href="index.html" id="item1">home</a>
-            <a href="menu.html" id="item3">our menu</a>
-            <a href="meetchef.html" id="item2">our chef</a>
-            <a href="bookingpage.html" id="item4">booking</a>
-            <a href="about us.html" id="item5">about us</a>
-        </nav>
+        <div class="nav-content">
+            <div class="main-head">
+                <h2 id="logo">lumina</h2>
+            </div>
+            <nav class="navbar">
+                <a href="index.html" id="item1">home</a>
+                <a href="menu.html" id="item3">our menu</a>
+                <a href="meetchef.html" id="item2">our chef</a>
+                <a href="bookingpage.html" id="item4">booking</a>
+                <a href="about us.html" id="item5">about us</a>
+            </nav>
+            <button class="ham-icon">
+                <label for="ham">
+                    <i class="fa-solid fa-bars"></i>
+                    <i class="fa-solid fa-x"></i>
+                </label>
+                <input type="checkbox" name="" id="ham">
+            </button>
+        </div>
         <div class="parallex-heading" style="padding: 16% 0;">
             <h2 id="head">our menu</h2>
         </div>
@@ -305,7 +547,7 @@
         <h2 id="one">appetizers</h2>
         <!-- class1 -->
         <div class="content">
-            <div class="one" style="width: 35%;">
+            <div class="one">
                 <div class="a">
                     <h2 id="two">four cheese garlic bread <span style="color: #c9ab81;margin-left: 10px;">$32</span>
                     </h2>
@@ -326,7 +568,7 @@
                 </div>
             </div>
             <!-- class2 -->
-            <div class="two" style="width: 34%;">
+            <div class="two">
                 <div class="a">
                     <h2 id="two">rastrami roll <span style="color: #c9ab81;margin-left: 10px;">$29</span></h2>
                     <p id="p-one">Spreadable cream cheese, crumbled blue cheese</p>
@@ -356,7 +598,7 @@
         <h2 id="one">main courses</h2>
         <div class="content">
             <!-- class1 -->
-            <div class="one" style="width: 35%;">
+            <div class="one">
                 <div class="a">
                     <h2 id="two">corn fed chicken<span style="color: #c9ab81;margin-left: 10px;">$17</span></h2>
                     <p id="p-one">Wild mushrooms, truffle potatoes, braised leeks carrots</p>
@@ -376,7 +618,7 @@
                 </div>
             </div>
             <!-- class2 -->
-            <div class="two" style="width: 34%;">
+            <div class="two">
                 <div class="a">
                     <h2 id="two">beaf burger meal<span style="color: #c9ab81;margin-left: 10px;">$32</span></h2>
                     <p id="p-one">Classic Greek salad, barrel aged Feta cheese, pitta bread</p>
@@ -405,7 +647,7 @@
         <h2 id="one">desserts</h2>
         <div class="content">
             <!-- class1 -->
-            <div class="one" style="width: 35%;">
+            <div class="one">
                 <div class="a">
                     <h2 id="two">creole cream cheesecake<span style="color: #c9ab81;margin-left: 10px;">$17</span></h2>
                     <p id="p-one">Creole cream cheese, chocolate filigree and warm caramel</p>
@@ -422,7 +664,7 @@
 
             </div>
             <!-- class2 -->
-            <div class="two" style="width: 34%;">
+            <div class="two">
                 <div class="a">
                     <h2 id="two">lemon meringe pie<span style="color: #c9ab81;margin-left: 10px;">$32</span></h2>
                     <p id="p-one">Dark chocolate mousse, candied pecan crunch and caramel</p>

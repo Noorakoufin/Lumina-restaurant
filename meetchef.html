@@ -72,7 +72,6 @@
 
         .main {
             display: flex;
-            /* flex-direction: column; */
             flex-flow: column wrap;
             align-items: center;
             padding: 1rem 0 3rem 0;
@@ -124,9 +123,11 @@
             cursor: pointer;
             padding: 20px;
         }
-.image:hover img{
-    opacity: 0.7;
-}
+
+        .image:hover img {
+            opacity: 0.7;
+        }
+
         h2#three {
             text-transform: uppercase;
             font-size: 2rem;
@@ -145,7 +146,7 @@
         }
 
         p#para {
-            font-size: 19px;
+            font-size: 17px;
             padding: 10px 0;
             color: #060606;
             font-weight: 450;
@@ -213,7 +214,7 @@
             text-transform: uppercase;
             font-weight: 450;
             color: #fff;
-            font-size: 21px;
+            font-size: 17px;
             word-wrap: break-word;
             padding: 15px 0;
             text-align: center;
@@ -273,7 +274,6 @@
 
         #brand::before,
         #brand::after {
-            /* flex: 1; */
             width: 0%;
             content: "";
             margin: 13px;
@@ -326,6 +326,208 @@
         .footer-link a:hover::after {
             width: 100%;
         }
+
+        @media screen and (max-width:1100px) {
+            .image:hover .overlay {
+                padding: 10px;
+            }
+
+            h2#three {
+                padding: 0;
+            }
+        }
+
+        @media screen and (max-width:950px) {
+            .chef-image {
+                padding: 3rem;
+            }
+
+            .image:hover .overlay {
+                padding: 8px 0;
+            }
+
+            h2#three {
+                font-size: 1.5rem;
+            }
+
+            p#senior {
+                font-size: 1.2rem;
+            }
+
+            p#para {
+                font-size: 15px;
+            }
+        }
+
+        @media screen and (max-width:800px) {
+            p#para {
+                font-size: 13px;
+            }
+
+            h2#three {
+                font-size: 1.2rem;
+            }
+
+            p#senior {
+                font-size: 1rem;
+            }
+
+            .chef-image {
+                padding: 24px 24px 0 24px;
+                width: 31%;
+            }
+
+            #two {
+                width: 61%;
+            }
+
+            .heading {
+                padding: 3em 0;
+            }
+
+            h2#chef-name,
+            span {
+                font-size: 15px;
+            }
+
+            .chefs {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width:480px) {
+            .video {
+                height: 52vh;
+            }
+
+            video {
+                height: 100%;
+            }
+
+            #two {
+                width: 91%;
+            }
+
+            #one {
+                font-size: 1.8rem;
+            }
+
+            #culinary {
+                font-size: 1.8rem;
+            }
+
+            .headchefs {
+                flex-wrap: wrap;
+                padding: 2rem 0;
+            }
+
+            #chef-one {
+                display: none;
+            }
+
+            .image {
+                width: 46%;
+            }
+
+            .chefs {
+                padding: 2rem 0 0 0;
+                flex-wrap: wrap;
+            }
+
+            #chef-border3 {
+                display: none;
+            }
+
+            .chef-image {
+                width: 42%;
+                padding: 23px 21px 0 11px;
+            }
+
+            #culinary {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media screen and (max-width:380px) {
+            #two {
+                width: 99%;
+                text-align: center;
+            }
+
+            #culinary {
+                font-size: 1.1rem;
+            }
+
+            .image {
+                width: 77%;
+                padding: 20px;
+            }
+
+            .headchefs {
+                padding: 2rem 0 0 0;
+            }
+
+            .image:hover .overlay {
+                padding: 21px 17px;
+            }
+
+            h2#three {
+                font-size: 1.4rem;
+                padding-bottom: 10px;
+            }
+
+            p#para {
+                font-size: 17px;
+            }
+
+            .chef-image {
+                width: 69%;
+                padding: 2rem
+            }
+
+            h2#ass-chef {
+                font-size: 1.6rem;
+            }
+
+            #brand {
+                font-size: 2.5rem;
+                margin: 0;
+            }
+
+            .footer {
+                padding: 0;
+            }
+
+            .footer-content {
+                font-size: 19px;
+                margin-top: 0;
+            }
+
+            .footer-link a {
+                font-size: 19px;
+                margin: 0 12px;
+            }
+
+            #culinary {
+                letter-spacing: 8px;
+            }
+        }
+
+        @media screen and (max-width:340px) {
+            .video {
+                height: 44vh;
+            }
+
+            #one {
+                font-size: 1.6rem;
+            }
+
+            #culinary {
+                font-size: 1rem;
+                font-weight: 400;
+                letter-spacing: 6px;
+            }
+        }
     </style>
 </head>
 
@@ -337,14 +539,14 @@
     <div class="heading">
         <h2 id="one">meet our chef</h2>
         <p id="two">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis beatae facilis error expedita nihil
-            iusto sed, eum impedit ullam voluptas!</p>
+            iusto sed, eum impedit!</p>
     </div>
     <div class="main">
         <div class="chef-heading">
             <h1 id="culinary">culinary director</h1>
         </div>
         <div class="headchefs">
-            <div class="image">
+            <div class="image" id="chef-one">
                 <img src="res image/chef_1.png" alt="">
                 <div class="overlay">
                     <h2 id="three">john doe</h2>
@@ -393,7 +595,7 @@
             <h2 id="chef-name">calen baker</h2>
             <span>assistant chef</span>
         </div>
-        <div class="chef-image">
+        <div class="chef-image" id="chef-border3">
             <div class="border-image">
                 <img src="res image/h4-team-img3.jpg" alt="">
             </div>
@@ -416,7 +618,7 @@
             <h2 id="chef-name">donna shields</h2>
             <span>assistant chef</span>
         </div>
-        <div class="chef-image">
+        <div class="chef-image" id="chef-border3">
             <div class="border-image">
                 <img src="res image/team-img4.jpg" alt="">
             </div>
