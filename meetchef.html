@@ -10,6 +10,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Mrs+Saint+Delafield&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
         * {
             margin: 0;
@@ -36,6 +37,105 @@
             background-color: #979696;
             border-radius: .5rem;
 
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            padding: 20px;
+            letter-spacing: 2px;
+            cursor: pointer;
+        }
+
+        .nav-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+            border-bottom: 1px solid #c9ab81;
+            position: sticky;
+            top: 0;
+            z-index: 99;
+            background-color: #0E0D0A;
+        }
+
+        .navbar a {
+
+            color: white;
+            font-size: 16px;
+            font-weight: 300;
+            position: relative;
+            text-transform: uppercase;
+        }
+
+        #logo {
+            color: #bba27e;
+            text-transform: capitalize;
+            letter-spacing: 5px;
+            padding: 12px 0;
+            font-family: "Great Vibes", cursive;
+            font-size: 33px;
+            font-size: 1.4rem;
+            font-weight: 400;
+            display: none;
+        }
+
+        .ham-icon {
+            display: none;
+            background-color: transparent;
+            border: none;
+        }
+
+        .ham-icon .fa-bars,
+        .ham-icon .fa-x {
+            color: #bba27e;
+            font-size: 1rem;
+
+        }
+
+        .ham-icon input[type="checkbox"] {
+            appearance: none;
+        }
+
+        .navbar>a::before,
+        .footer-link a::before {
+            content: "";
+            position: absolute;
+            background-color: #c9ab81;
+            height: 1px;
+            width: 0%;
+            bottom: -2px;
+            transition: 0.3s cubic-bezier(0, 0.82, 0.97, 0.79);
+
+        }
+
+        .navbar>a:hover::before,
+        .footer-link a:hover:before {
+            width: 100%;
+        }
+
+        .navbar>a::after,
+        .footer-link a::after {
+            content: "";
+            position: absolute;
+            background-color: #c9ab81;
+            height: 1px;
+            width: 0%;
+            bottom: -6px;
+            left: 1px;
+            transition: 0.3s linear;
+            transition-delay: 0.2s;
+        }
+
+        .navbar>a:hover::after,
+        .footer-link a:hover::after {
+            width: 100%;
+        }
+
+        .navbar>a:active .navbar>a::before,
+        .navbar>a:active .navbar>a::after {
+            width: 100%;
         }
 
         .video {
@@ -360,6 +460,10 @@
         }
 
         @media screen and (max-width:800px) {
+            .navbar {
+                gap: 2rem;
+            }
+
             p#para {
                 font-size: 13px;
             }
@@ -392,6 +496,18 @@
 
             .chefs {
                 width: 100%;
+            }
+        }
+
+        @media screen and (max-width:600px) {
+            .navbar {
+                gap: 1rem;
+            }
+        }
+
+        @media screen and (max-width:500px) {
+            .navbar a {
+                font-size: 12px;
             }
         }
 
@@ -446,6 +562,62 @@
             #culinary {
                 font-size: 1.5rem;
             }
+        }
+
+        @media screen and (max-width:400px) {
+            .navbar a {
+                display: block;
+                padding: 5px 0;
+                font-size: 1rem;
+            }
+
+            .nav-content {
+                justify-content: space-around;
+            }
+
+            .navbar {
+                order: 2;
+                display: block;
+                height: 0;
+                padding: 21px 100px 20px 120px;
+                width: 100%;
+                overflow: hidden;
+                position: fixed;
+                left: -100%;
+                top: 53px;
+                transition: 0.5s ease-in-out;
+            }
+
+            .ham-icon {
+                display: block;
+            }
+
+            #logo {
+                display: inline-block;
+
+            }
+
+            .fa-x {
+                display: none;
+            }
+
+            .nav-content:has(input[type="checkbox"]:checked) .navbar {
+
+                height: 204px;
+                overflow: visible;
+                left: 0;
+                text-align: center;
+                background-color: #11110fe3;
+            }
+
+            .nav-content:has(input[type="checkbox"]:checked) .fa-bars {
+                display: none;
+            }
+
+            .nav-content:has(input[type="checkbox"]:checked) .fa-x {
+                display: inline-block;
+            }
+
         }
 
         @media screen and (max-width:380px) {
@@ -532,6 +704,25 @@
 </head>
 
 <body>
+    <div class="nav-content">
+        <div class="main-head">
+            <h2 id="logo">lumina</h2>
+        </div>
+        <nav class="navbar">
+            <a href="index.html" id="item1">home</a>
+            <a href="menu.html" id="item3">our menu</a>
+            <a href="meetchef.html" id="item2">our chef</a>
+            <a href="bookingpage.html" id="item4">booking</a>
+            <a href="about us.html" id="item5">about us</a>
+        </nav>
+        <button class="ham-icon">
+            <label for="ham">
+                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-x"></i>
+            </label>
+            <input type="checkbox" name="" id="ham">
+        </button>
+    </div>
     <div class="video">
         <video src="res image/video-sushi.mp4" title="sushi video" loop muted autoplay
             style="width: 100%;object-fit: cover;"></video>
