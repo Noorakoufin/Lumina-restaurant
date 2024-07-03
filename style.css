@@ -430,7 +430,7 @@ h2#one {
 .swap-content {
   text-align: center;
   width: 20%;
-  height: 600px;
+  height: 630px;
   flex-direction: column;
   display: flex;
   justify-content: space-around;
@@ -468,11 +468,11 @@ h2#one {
 }
 
 .swap-content:hover .swap-image {
-  transform: translateY(70%);
+  transform: translateY(55%);
 }
 
 .swap-content:hover .swap-text {
-  transform: translateY(-320%);
+  transform: translateY(-400%);
 
 }
 
