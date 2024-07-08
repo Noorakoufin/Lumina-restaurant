@@ -476,10 +476,10 @@ h2#one {
 
 }
 
-.swap-content:hover {
+/* .swap-content:hover {
   background-color: #1c282c;
   border: 1px solid #373432;
-}
+} */
 
 .swap-content:hover .swap-text h2 {
   color: rgb(255, 253, 234);
